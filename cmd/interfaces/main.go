@@ -7,6 +7,7 @@ import (
 
 type geometry interface {
 	area() float64
+	// для каждого типа свой метод, либо generic
 }
 
 type rect struct {
@@ -32,4 +33,5 @@ func geometryArea(g geometry) float64 {
 func main() {
 	fmt.Println(geometryArea(&rect{width: 3, height: 4}))
 	fmt.Println(geometryArea(&circle{radius: 5}))
+	// & взятие значения
 }
